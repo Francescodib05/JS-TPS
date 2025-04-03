@@ -40,7 +40,8 @@ function fetchPersonById(id){
             const person = persons.find(person => person.id == id);
             if (person){
                 return resolve(person)
-            } else {
+            } 
+            else {
                 return reject(new Error(`No person with id ${id}`))
             }
         }, 3000)
@@ -53,7 +54,8 @@ function fetchJobById(id){
             const job = jobs.find(job => job.id == id);
             if (job){
                 return resolve(job)
-            } else {
+            }
+            else {
                 return reject(new Error(`No job with id ${id}`))
             }
         }, 2000)
