@@ -25,7 +25,7 @@ function somma(): number {
 }
 
 function numeriPari(): number[] {
-    return clonePersona.filter(number => number % 2 === 0);
+    return clonePersona.filter(number => number % 2 === 0).map(n => n * 2);
 }
 
 function maggiorenni(): Person[] {
