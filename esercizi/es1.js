@@ -21,7 +21,14 @@ function somma(...numeri) {
 
 function numeriPari(...numeri) {
     numeri = [...clonePersona]
-    return numeri.filter(number => number % 2 === 0);
+    return numeri.filter(number => number % 2 === 0).map(num => num * 2);
+}
+
+function numeriDoppi(...numeri) {
+    numeri = [...persona]
+    ris = []
+    numeri.filter(num => num % 2 === 0).forEach((num, i, arr) => { arr[i] = ris.push(num * 2) });
+    return ris;
 }
 
 function maggiorenni(...person) {
@@ -32,6 +39,7 @@ function maggiorenni(...person) {
 const adults = maggiorenni(persons)
 
 console.log("la somma dell'array è:", somma());
-console.log("I numeri pari sono:", numeriPari());
+console.log("I numeri sono:", clonePersona, " i numeri pari moltiplicati per 2 sono:", numeriPari());
+console.log("I numeri pari sono:", numeriDoppi());
 console.log(adults);
 
