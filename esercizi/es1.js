@@ -33,7 +33,7 @@ function numeriDoppi(...numeri) {
 
 function maggiorenni(...person) {
     person = [...persons]
-    return person.filter(person => person.age >= 18).sort((a, b) => a.age - b.age).map(person=> person.age);
+    return person.filter(person => person.age >= 18).sort((a, b) => a.age - b.age).map(person => person.age);
 }
 
 const adults = maggiorenni(persons)
@@ -41,5 +41,5 @@ const adults = maggiorenni(persons)
 console.log("la somma dell'array è:", somma());
 console.log("I numeri sono:", clonePersona, " i numeri pari moltiplicati per 2 sono:", numeriPari());
 console.log("I numeri pari moltiplicati con il metodo forEach:", numeriDoppi());
-console.log(adults);
+console.log("Eta delle persone adulte :", adults);
 
