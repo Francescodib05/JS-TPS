@@ -1,0 +1,99 @@
+<script type="module" src="utility.js"></script>
+
+
+ES.1 con spiegazione
+ESERCIZIO SVOLTO:
+const list = [1,2,3,4,5];
+const [a,b,c,d,e] = list;
+console.log(a + b + c + d + e);
+
+SPIEGAZIONE:
+PASSO 1: Definire una lista di array, in questo caso di 5 numeri
+PASSO 2: Definire delle variabili per ogni elemento dell'array ed associarle alla variabile stessa dell'array
+PASSO 3 = Stampare con console.log la somma tra questi stessi elementi
+
+
+
+
+ES.2 con spiegazione
+
+ESERCIZIO SVOLTO:
+const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numPariMoltiplicati = numeri.filter(n => n % 2 === 0).map(n => n * 2);
+console.log(numPariMoltiplicati);
+
+SPIEGAZIONE:
+PASSO 1: Definire una lista di array, in questo caso di 10 numeri
+PASSO 2: Utilizzo del metodo filter()
+numeri.filter(n => n % 2 === 0)
+Il metodo filter() crea un nuovo array contenente solo gli elementi dell'array originale che soddisfano una condizione specifica.
+In questo caso, la condizione è n % 2 === 0, che significa "se il numero è pari". 
+Il simbolo % rappresenta l'operazione di modulo, che restituisce il resto della divisione di un numero per un altro.
+Quindi, il metodo filter() itererà sull'array numeri e selezionerà solo i numeri pari.
+PASSO 3: Utilizzo del metodo map()
+.map(n => n * 2)
+Il metodo map() crea un nuovo array contenente i risultati dell'applicazione di una funzione a ciascun elemento dell'array.
+In questo caso, la funzione è n => n * 2, che significa "moltiplica ciascun numero per 2".
+Quindi, il metodo map() itererà sull'array dei numeri pari selezionati dal metodo filter() e li moltiplicherà per 2.
+PASSO 4: Assegnazione del risultato a una variabile
+In questo caso è const numPariMoltiplicati = ...
+Il risultato dell'esecuzione dei metodi filter() e map() viene assegnato a una variabile chiamata numPariMoltiplicati.
+PASSO 5: Stampare il risultato con console.log.
+
+
+
+VERSIONE DI SIMONA DELL'ES 2:
+const numeri = [1,2,3,4,5,6,7,8,9,10];
+const newlist = numeri.filter(numero => numero % 2);
+const newlist2 = numeri.map(numero => numero * 2);
+console.log(newlist2);
+
+
+
+
+ES.3 con spiegazione
+ESERCIZIO SVOLTO:
+let persone = [
+    { nome: 'Mario', eta: 25 },
+    { nome: 'Luigi', eta: 30 },
+    { nome: 'Giovanni', eta: 17 },
+    { nome: 'Francesca', eta: 22 },
+    { nome: 'Alessandro', eta: 19 }
+  ];
+  
+persone.sort((a, b) => a.eta - b.eta);
+let nomiMaggiorenni = persone.filter(p => p.eta > 18).map(p => p.nome);
+console.log(nomiMaggiorenni);
+
+SPIEGAZIONE:
+
+Sì, posso spiegarti in dettaglio l'esecuzione del codice.
+
+PASSO 1: Definizione dell'array di oggetti
+In questo passo, definiamo un array di oggetti chiamato persone. Ogni oggetto rappresenta una persona con due proprietà:
+- nome: il nome della persona
+- eta: l'età della persona
+
+PASSO 2: Ordinamento dell'array
+In questo passo, utilizziamo il metodo sort() per ordinare l'array persone in ordine crescente per età.
+Il metodo sort() accetta una funzione di confronto come argomento. La funzione di confronto viene chiamata per ogni coppia di elementi nell'array e deve restituire un valore che indica l'ordine dei due elementi:
+
+- Se il valore restituito è minore di 0, l'elemento a viene posizionato prima dell'elemento b.
+- Se il valore restituito è maggiore di 0, l'elemento a viene posizionato dopo l'elemento b.
+- Se il valore restituito è uguale a 0, l'ordine degli elementi a e b non cambia.
+
+Nel nostro caso, la funzione di confronto restituisce la differenza tra le età dei due elementi (a.eta - b.eta). Questo significa che gli elementi verranno ordinati in ordine crescente per età.
+
+PASSO 3: Filtraggio degli elementi
+In questo passo, utilizziamo il metodo filter() per creare un nuovo array contenente solo gli elementi dell'array persone che soddisfano una condizione specifica.
+La condizione specifica è che l'età della persona (p.eta) sia maggiore di 18. Il metodo filter() restituisce un nuovo array contenente solo gli elementi che soddisfano questa condizione.
+
+PASSO 4: Estrazione dei nomi:
+In questo passo, utilizziamo il metodo map() per creare un nuovo array contenente solo i nomi delle persone nell'array filtrato.
+Il metodo map() accetta una funzione di trasformazione come argomento. La funzione di trasformazione viene chiamata per ogni elemento nell'array filtrato e deve restituire un nuovo valore.
+Nel nostro caso, la funzione di trasformazione restituisce il nome della persona (p.nome). Il metodo map() restituisce un nuovo array contenente solo i nomi delle persone.
+
+PASSO 5: Assegnazione del risultato a una variabile
+In questo passo, assegniamo il risultato dell'esecuzione dei metodi filter() e map() a una variabile chiamata nomiMaggiorenni.
+
+Passo 6: Stampa del risultato con console.log(nomiMaggiorenni)
