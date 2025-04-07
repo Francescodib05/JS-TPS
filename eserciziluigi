@@ -1,0 +1,38 @@
+//Crea un programma che crea un array di 5 numeri, somma tutti gli elementi dell'array e stampa il risultato
+const array = [1, 2, 3, 4, 5];
+let somma = 0;
+
+for (let i = 0; i < array.length; i++) {
+    somma += array[i];
+}
+
+console.log(somma);
+
+//Crea un array contenente i numeri da 1 a 10. Ricava da questo array, un altro contenente solo i numeri pari moltiplicati per 2
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numeri =
+array.filter(numero => numero % 2 === 0);
+array.map(numero => numero * 2)
+
+console.log(numeri);
+
+
+//Creare un array di oggetti, ciascuno rappresentante una persona con un nome e un'eta'. Ordina l'array per eta' in ordine crescente e poi estrai solo i nomi delle persone che hanno più di 18 anni
+const persone = [
+    {nome: "Mario", eta: 30 },
+    {nome: "Giulia", eta: 25 },
+    {nome: "Luca", eta: 35 },
+    {nome: "Anna", eta: 17 },
+    {nome: "Marco", eta: 20 },
+];
+
+//Ordinamento dell'array per età in ordine crescente 
+persone.sort((a, b) => a.eta - b.eta);
+
+//estrazione dei nomi delle persone con età maggiore di 18 anni 
+const nomiMaggiori18 = 
+persone.filter(persona => persona.eta <18)
+persone.map(persona => persona.nome);
+
+//stampa del risultato
+console.log(nomiMaggiori18);
